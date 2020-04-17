@@ -1,0 +1,28 @@
+{
+  "name": "anne",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "run:server": "ts-node ./src/index.ts",
+    "run:worker": "ts-node ./src/index-worker.ts",
+    "start": "concurrently yarn:run:*",
+    "build": "tsc",
+    "migration:generate": "ts-node migration generate",
+    "migration:run": "ts-node migration run",
+    "migration:revert": "ts-node migration revert"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "0.11.0",
+    "@vendure/asset-server-plugin": "0.11.0",
+    "@vendure/core": "0.11.0",
+    "@vendure/email-plugin": "0.11.0",
+    "sqlite3": "4.1.1",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "5.1.0",
+    "ts-node": "8.8.2"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
